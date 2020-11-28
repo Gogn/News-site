@@ -1,0 +1,10 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__hello{
+  font-size: 2em;
+  color: #c4d3c4;
+}

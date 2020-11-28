@@ -1,0 +1,28 @@
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 20px 0 20px;
+}
+.navbar--light{
+  background: linear-gradient(#EFE7F5, #F6E9F8);
+  color: #252526;
+}
+
+.navbar__brand{
+  color: #55aee3;
+  font-weight: bold;
+}
+.navbar__list{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-item{
+  /*margin-right: 20px;*/
+}
+.nav-item__link{
+
+}
