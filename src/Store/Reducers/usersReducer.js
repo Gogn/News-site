@@ -1,5 +1,5 @@
 const initialState = {
-  currentUser: 'test',
+  currentUser: '',
   getLoading: false,
   getError: '',
 }

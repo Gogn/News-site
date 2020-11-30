@@ -3,6 +3,6 @@ import rootReducer from '../Store/Reducers/rootReducer';
 
 export default configureStore({
   reducer: {
-    auth: rootReducer,
+    root: rootReducer,
   },
 });

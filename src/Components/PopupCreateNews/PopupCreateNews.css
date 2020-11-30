@@ -1,0 +1,109 @@
+.PopupCreateNews{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 50%;
+  margin-top: -300px;
+  left: 50%;
+  margin-left: -250px;
+  min-width: 600px;
+  min-height: 500px;
+  background: linear-gradient(#f0eaf5, #f6e9f8);
+  border: 1px solid #a1a1bd;
+  box-shadow: 0 30px 40px rgba(0,0,0,.2);
+}
+.PopupCreateNews h3{
+  margin: 0 0 20px 0;
+  color: #252526;
+}
+.PopupCreateNews__close{
+  position: absolute;
+  top: 5px;
+  margin-left: 90%;
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #abf5f3;
+  border-color: #85c6c4;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: center;
+  cursor: pointer;
+}
+.PopupCreateNews--transitionIn{
+  animation-name: modalFadeIn;
+  animation-duration: .3s;
+}
+@keyframes modalFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.PopupCreateNews--transitionOut{
+  animation-name: modalFadeOut;
+  animation-duration: .3s;
+}
+@keyframes modalFadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.PopupCreateNews__content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PopupCreateNews__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.PopupCreateNews__input{
+  margin-bottom: 15px;
+  /*max-width: 300px;*/
+  height: 20px;
+  font-family: Ubuntu, serif;
+  text-align: center;
+  font-size: 0.8em;
+}
+.input--title{
+  font-family: 'Tangerine', serif;
+  font-size: 1.5em;
+  text-shadow: 4px 4px 4px #aaa;
+  height: 60px;
+  width: 80%;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+}
+.input--content{
+  font-family: "DejaVu Sans", serif;
+  display: block;
+  width: 77%;
+  height: 200px;
+  text-align: left;
+  padding: 15px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+}
+.input--submit{
+  height: 40px;
+  background-color: #abf5f3;
+  border-color: #85c6c4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.PopupCreateNews__error{
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  color: red;
+}

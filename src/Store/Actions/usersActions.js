@@ -1,7 +1,6 @@
 import { Users } from '../../Api/Users'
 
 export function userLogin(name, password) {
-
   return async dispatch => {
     dispatch({
       type: "LOGIN_user",
@@ -44,6 +43,14 @@ export function userLogin(name, password) {
     }
 
   };
+}
+
+export function userLogout() {
+  return async dispatch => {
+    dispatch({
+      type: "LOGOUT_user",
+    });
+  }
 }
 
 // export function createUser(title) {

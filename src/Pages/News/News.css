@@ -1,0 +1,114 @@
+.news{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: 3px solid rgba(161, 161, 189, .3);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  background-color: rgba(233, 228, 253, .2);
+  font-family: "DejaVu Sans", serif;
+  font-size: 0.9em;
+}
+.news--unapproved{
+  background-color: rgba(133, 198, 196, .3);
+  border-color: rgba(128, 128, 128, .3);
+}
+.news--light{
+  background-color: white;
+}
+.news--dark{
+  background-color: #363638;
+}
+
+.news__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.news__content{
+  padding: 50px;
+  padding-top: 20px;
+  width: 90%;
+}
+
+.news__item{
+  padding: 10px 15px 10px 15px;
+  border-bottom: 1px solid rgba(161, 161, 189, .3);
+}
+.news__title{
+  text-align: left;
+  padding-left: 30px;
+  font-family: 'Playfair', serif;
+  font-size: 1.5em;
+  text-shadow: 4px 4px 4px #aaa;
+}
+.news__text{
+
+}
+.news__date{
+  text-align: right;
+  opacity: 40%;
+  font-size: 0.6em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.news__header{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.create-news{
+  flex: 1;
+}
+.news__search{
+  flex: 3;
+  margin-right: 15px;
+  height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  background-color: #efe7f5;
+  border-radius: 5px;
+  border: 1px solid #a1a1bd;
+}
+.news__search--dark{
+  background-color: #727286;
+}
+.news__search::placeholder{
+  color: #b7b7d5;
+}
+.news__search--dark::placeholder{
+  color: #d3d3ec;
+}
+
+.news__admin{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.news__button{
+  margin-right: 20px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #e9e4fd;
+}
+.news__button--approve{
+
+}
+.news__button--delete{
+
+}
+
+.create-news{
+  width: 95%;
+  text-align: center;
+  font-size: 0.8em;
+  background-color: #efe7f5;
+  border-radius: 5px;
+  border: 1px solid #a1a1bd;
+}

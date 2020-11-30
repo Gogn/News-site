@@ -1,0 +1,86 @@
+.popupLogin{
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(#f0eaf5, #f6e9f8);
+  border: 1px solid #a1a1bd;
+  box-shadow: 0 30px 40px rgba(0,0,0,.2);
+}
+.popupLogin h3{
+  margin: 0 0 20px 0;
+  color: #252526;
+}
+.popupLogin__close{
+  position: absolute;
+  margin-left: 90%;
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: #abf5f3;
+  border-color: #85c6c4;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: center;
+  cursor: pointer;
+}
+.popupLogin--transitionIn{
+  animation-name: modalFadeIn;
+  animation-duration: .3s;
+}
+@keyframes modalFadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.popupLogin--transitionOut{
+  animation-name: modalFadeOut;
+  animation-duration: .3s;
+}
+@keyframes modalFadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.popupLogin__content{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupLogin__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popupLogin__input{
+  margin-bottom: 15px;
+  max-width: 300px;
+  height: 20px;
+  font-family: Ubuntu, serif;
+  text-align: center;
+  font-size: 0.8em;
+}
+.input--text{
+  margin-bottom: 5px;
+}
+.input--password{
+}
+.input--submit{
+  height: 40px;
+  background-color: #abf5f3;
+  border-color: #85c6c4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popupLogin__error{
+  margin-bottom: 10px;
+  font-size: 0.8em;
+  color: red;
+}

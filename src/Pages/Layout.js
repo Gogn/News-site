@@ -1,43 +1,41 @@
 import React, { useState } from 'react';
 import './Layout.css'
 import { useHistory } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { Navbar } from "../Components/Navbar/Navbar";
 // import MenuToggle from "../../Components/Navigation/MenuToggle/menuToggle";
-// import Drawer from "../../Components/Navigation/Drawer/Drawer";
+import { PopupLogin } from "../Components/PopupLogin/PopupLogin";
+import { switchTheme } from "../Store/Actions/appActions";
 
 export const Layout = (props) => {
+  const dispatch = useDispatch();
   const history = useHistory();
+  const themeDark = useSelector(state => state.root.app.colorsDark);
 
-  const [state, setState] = useState({
-    menu: false
-  })
+  const [popupLoginIsOpen, setPopupLoginIsOpen] = useState(false)
 
-  const toggleMenuHandler = () => {
-    setState({
-      menu: !this.state.menu
-    })
+  const handlePopupLogin = () => {
+      setPopupLoginIsOpen(!popupLoginIsOpen)
   }
 
 
     return (
-      <div className={'Layout'}>
+      <div className={'layout ' + (themeDark ? 'layout--dark' : 'layout--light')}>
 
-        {/*<Drawer*/}
-        {/*  isOpen={this.state.menu}*/}
-        {/*  onClose={this.toggleMenuHandler}*/}
-        {/*  isAuthenticated={this.props.isAuthenticated}*/}
-        {/*/>*/}
+        <PopupLogin
+          isOpen={popupLoginIsOpen}
+          openPopupLogin={() => handlePopupLogin()}
+        />
 
-        {/*<MenuToggle*/}
-        {/*  onToggle={this.toggleMenuHandler}*/}
-        {/*  isOpen={this.state.menu}*/}
-        {/*/>*/}
+        <Navbar
+          openPopupLogin={() => handlePopupLogin()}
+          setNight={() => dispatch(switchTheme())}
+        />
 
-        <Navbar />
-
-        <main className={'Layout'}>
+        <main className={'layout__main'}>
           {props.children}
         </main>
+
       </div>
     )
 }

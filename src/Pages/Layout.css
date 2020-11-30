@@ -1,15 +1,29 @@
-.Layout{
-  height: 100vh;
+.layout{
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #252526;
-  color: #e9e9e9;
   font-size: 24px;
   font-family: "Helvetica Neue", serif;
 }
 
-.Layout.main{
+.layout__main{
+  min-height: 100vh;
+  margin-top: 50px;
+}
+
+.layout--dark{
+  background-color: #252526;
+  color: #e9e9e9;
+}
+
+.layout--light{
+  background-color: #e9e9e9;
+  color: #252526;
+}
+
+.layout.main{
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
+

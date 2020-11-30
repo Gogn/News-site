@@ -3,12 +3,12 @@ import './Home.css'
 import {useSelector} from "react-redux";
 
 export const Home = () => {
-  const currentUser = useSelector(state => state.auth.users.currentUser)
+  const currentUser = useSelector(state => state.root.users.currentUser)
   return (
     <div className='home'>
-      <div className={'home__hello'}>
-        Привет, {currentUser}
-      </div>
+      <h1 className={'home__hello'}>
+        Привет, {currentUser ? currentUser : 'гость'}
+      </h1>
     </div>
   )
 }
