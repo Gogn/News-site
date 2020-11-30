@@ -24,12 +24,12 @@ export function userLogin(name, password) {
       }
 
       if (userFound) {
-        dispatch({
+        await dispatch({
           type: "LOGIN_user_SUCCESS",
           payload: name,
         });
       } else {
-        dispatch({
+        await dispatch({
           type: "LOGIN_user_ERROR",
           payload: error,
         });

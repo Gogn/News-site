@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './PopupLogin.css'
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../../Store/Actions/usersActions";
@@ -9,11 +9,19 @@ export const PopupLogin = ({ isOpen, openPopupLogin }) => {
   const [name, setName] = useState('')
   const [pas, setPas] = useState('')
   const error = useSelector(state => state.root.users.getError);
+  const [needToClose, setNeedToClose] = useState(false)
+
+  useEffect(()=> {
+    if (error === '' && needToClose === true) {
+      openPopupLogin()
+      setNeedToClose(false)
+    }
+  }, [error, needToClose])
 
   const loginHandler = (e) => {
     e.preventDefault();
     dispatch(userLogin(name,pas))
-    error === '' && openPopupLogin()
+    setNeedToClose(true)
   }
 
   return (
